@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/async" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/basic-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/character-parser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/depd" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/ee-first" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/morgan" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/on-finished" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules/on-headers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/routes/users.js" charset="UTF-8" />
+  </component>
+</project>

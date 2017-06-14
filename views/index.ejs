@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form id="addForm" enctype="multipart/form-data">
+    <fieldset>
+        <h3>创建用户</h3>
+        姓名：<input type="text" name="name" placeholder="请输入姓名"/>
+        <br> <br>
+        头像：<input type="file" name="icon" multiple="multiple">
+        <br> <br>
+        <input type="button" onclick="submit1()" value="提交（formidable处理）"/>
+        <input type="button" onclick="submit2()" value="提交（multiparty处理）"/>
+        <br> <br>
+    </fieldset>
+</form>
+
+
+</body>
+<script src="/js/jquery-1.9.1.min.js"></script>
+<script>
+function submit1(){
+
+    var data = new FormData($('#addForm')[0]);
+
+    ajaxFormPost("/api/user/addUser_with_formidable",data,function(data){
+        console.log("formidable处理结果:",data);
+
+        alert(data.code+":"+data.msg);
+
+    });
+
+}
+
+function submit2(){
+    var data = new FormData($('#addForm')[0]);
+
+    ajaxFormPost("/api/user/addUser_with_multiparty",data,function(data){
+        console.log("multiparty处理结果:",data);
+
+        alert(data.code+":"+data.msg);
+
+    });
+}
+
+
+//ajax Post方法封装
+function ajaxFormPost(url,formData,callBack){
+    $.ajax({
+        type:'POST',
+        dataType:'text',
+        processData: false,  // 告诉JSLite不要去处理发送的数据
+        contentType: false,   // 告诉JSLite不要去设置Content-Type请求头
+        data:formData,
+        url:url,
+        success:function(data){
+            data = JSON.parse(data);
+            callBack(data);
+        },
+        error:function(data){
+            console.log('error:',data)
+            callBack(data);
+        }
+    });
+}
+
+</script>
+</html>
