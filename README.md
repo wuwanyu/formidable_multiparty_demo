@@ -138,8 +138,12 @@ icon:xxx.png
 }
 ```
 
+##### 总结：
 
+表单提交涉及到多图上传，一定要使用multipaty
 
 #### 效果图
 
-![image](https://github.com/wuwanyu/formidable.multipaty.node.test/blob/master/img-webview.jpg)
+![image](https://github.com/wuwanyu/formidable_multiparty_demo/blob/master/screenshot/formidable.png)
+
+![image](https://github.com/wuwanyu/formidable_multiparty_demo/blob/master/screenshot/multipaty.png)
