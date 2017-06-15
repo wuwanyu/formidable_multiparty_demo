@@ -2,9 +2,9 @@
 
 #### 启动项目
 
-1.运行：npm start
-
-2.在浏览器输入：http://localhost:3000/
+1.安装依赖包：npm install
+2.运行：npm start
+3.在浏览器输入：http://localhost:3000/
 
 
 
